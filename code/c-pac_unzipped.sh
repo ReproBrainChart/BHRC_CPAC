@@ -20,6 +20,9 @@ echo "}" >> ${filterfile}
 sed -i "s/'/\"/g" ${filterfile}
 sed -i "s/ses-//g" ${filterfile}
 
+# Manually delete the non-relevant sessions
+(cd inputs/data/${subid} && rm -rf `find . -type d -name 'ses*' | grep -v $sesid`)
+
 mkdir -p ${subid}_${sesid}_outputs
 # C-PAC-specific memory optimization -----------------------------
 if [[ -f code/runtime_callback.log ]]
