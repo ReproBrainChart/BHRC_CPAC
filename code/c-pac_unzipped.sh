@@ -33,7 +33,7 @@ then
       participant \
       --preconfig rbc-options \
       --skip_bids_validator \
-      --n_cpus 6 \
+      --n_cpus ${NSLOTS} \
       --mem_gb 32 \
       --participant_label "$subid" \
       --runtime_usage=code/runtime_callback.log \
@@ -49,7 +49,7 @@ else
       participant \
       --preconfig rbc-options \
       --skip_bids_validator \
-      --n_cpus 6 \
+      --n_cpus ${NSLOTS} \
       --mem_gb 32 \
       --participant_label "$subid"
 fi

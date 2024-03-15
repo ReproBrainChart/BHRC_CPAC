@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -l h_vmem=90G
 #$ -l tmpfree=200G
-#$ -pe threaded 6
+#$ -pe threaded 2
 #$ -R y
 #$ -l hostname=!compute-fed*
 
